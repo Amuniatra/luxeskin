@@ -44,7 +44,7 @@ export function ReviewModal({
       setTimeout(() => {
         onReviewSubmitted();
         handleClose();
-      }, 4000);
+      }, 6000);
     }, 1500);
   };
 
