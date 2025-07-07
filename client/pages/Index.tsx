@@ -173,6 +173,8 @@ export default function Index() {
                 review:
                   "My fine lines have visibly reduced in just 2 weeks! This is the best skincare investment I've made.",
                 rating: 5,
+                image:
+                  "https://cdn.builder.io/api/v1/image/assets%2Fdf6d11d3164a4323bedc7a273032d85b%2Ff37a298d105f470182b85d5cc80528f4?format=webp&width=800",
               },
               {
                 name: "Emma L.",
@@ -180,6 +182,8 @@ export default function Index() {
                 review:
                   "Finally found something that doesn't irritate my sensitive skin but still gives amazing results.",
                 rating: 5,
+                image:
+                  "https://cdn.builder.io/api/v1/image/assets%2Fdf6d11d3164a4323bedc7a273032d85b%2F53780dd464de40af92b914b6fe7d7f78?format=webp&width=800",
               },
               {
                 name: "Jessica R.",
@@ -187,6 +191,8 @@ export default function Index() {
                 review:
                   "My skin feels 10 years younger. The hydration boost is incredible and lasts all day.",
                 rating: 5,
+                image:
+                  "https://cdn.builder.io/api/v1/image/assets%2Fdf6d11d3164a4323bedc7a273032d85b%2F29edfc43e1f446d7a10e6edff87497e2?format=webp&width=800",
               },
             ].map((testimonial, index) => (
               <div
@@ -204,8 +210,14 @@ export default function Index() {
                 <p className="text-card-foreground mb-4 leading-relaxed">
                   "{testimonial.review}"
                 </p>
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 bg-gradient-to-r from-blush-300 to-lavender-300 rounded-full"></div>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-blush-200">
+                    <img
+                      src={testimonial.image}
+                      alt={`${testimonial.name} - Customer`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <div>
                     <p className="font-medium text-sm">{testimonial.name}</p>
                     <p className="text-xs text-muted-foreground">
