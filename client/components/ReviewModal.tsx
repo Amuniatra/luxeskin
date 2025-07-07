@@ -44,7 +44,7 @@ export function ReviewModal({
       setTimeout(() => {
         onReviewSubmitted();
         handleClose();
-      }, 2000);
+      }, 4000);
     }, 1500);
   };
 
@@ -67,8 +67,8 @@ export function ReviewModal({
             Share Your Experience
           </DialogTitle>
           <DialogDescription>
-            Tell us about your skincare journey and receive a free sample from
-            Anua as our thank you gift!
+            Complete this quick survey about your skincare journey and receive a
+            free sample from Anua as our thank you gift!
           </DialogDescription>
         </DialogHeader>
 
