@@ -76,6 +76,12 @@ export default function Index() {
                   health with clinically proven ingredients. Transform your skin
                   in just 7 days.
                 </p>
+                <div className="bg-blush-100 border border-blush-200 rounded-lg p-4 mt-4">
+                  <p className="text-blush-800 font-medium text-sm">
+                    🎯 We're looking for more reviewers! Share your skin
+                    concerns and get a free sample to try our products.
+                  </p>
+                </div>
               </div>
 
               <div className="space-y-4">
