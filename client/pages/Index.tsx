@@ -128,13 +128,17 @@ export default function Index() {
             <div className="relative">
               <div className="relative z-10">
                 <div className="bg-gradient-to-br from-white to-blush-50 rounded-3xl p-8 shadow-2xl border border-blush-100">
-                  <div className="aspect-square bg-gradient-to-br from-blush-200 to-lavender-200 rounded-2xl flex items-center justify-center">
-                    <Sparkles className="h-24 w-24 text-blush-600" />
+                  <div className="aspect-square bg-white rounded-2xl flex items-center justify-center p-4">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2Fdf6d11d3164a4323bedc7a273032d85b%2Ffe913e735bb7487fa9dfe931eda5037b?format=webp&width=800"
+                      alt="Anua Skincare Products - Heartleaf Collection"
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                   <div className="mt-6 text-center">
-                    <h3 className="font-bold text-xl mb-2">Premium Formula</h3>
+                    <h3 className="font-bold text-xl mb-2">Anua Collection</h3>
                     <p className="text-muted-foreground">
-                      Advanced peptides, hyaluronic acid, and vitamin C
+                      Heartleaf formula with 77% soothing ingredients
                     </p>
                   </div>
                 </div>
