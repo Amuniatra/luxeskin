@@ -237,6 +237,117 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Before/After Results */}
+      <section className="py-16 px-4 bg-gradient-to-r from-blush-50 to-lavender-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Incredible Transformations
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              See the dramatic before and after results our customers achieved
+              in just weeks
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-blush-200">
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-5 w-5 fill-yellow-400 text-yellow-400"
+                    />
+                  ))}
+                </div>
+                <blockquote className="text-lg text-card-foreground leading-relaxed mb-4">
+                  "I couldn't believe the difference after just 3 weeks! My skin
+                  texture improved dramatically, and the dark spots started
+                  fading. This product has given me my confidence back."
+                </blockquote>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blush-300 to-lavender-300 rounded-full flex items-center justify-center">
+                    <span className="text-white font-semibold">MK</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold">Maria K.</p>
+                    <p className="text-sm text-muted-foreground">
+                      Age 34, Used for 3 weeks
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-6 grid grid-cols-3 gap-4 text-center">
+                  <div className="bg-blush-50 rounded-lg p-3">
+                    <div className="text-2xl font-bold text-primary">-78%</div>
+                    <p className="text-xs text-muted-foreground">
+                      Dark spots reduced
+                    </p>
+                  </div>
+                  <div className="bg-blush-50 rounded-lg p-3">
+                    <div className="text-2xl font-bold text-primary">+85%</div>
+                    <p className="text-xs text-muted-foreground">
+                      Skin smoothness
+                    </p>
+                  </div>
+                  <div className="bg-blush-50 rounded-lg p-3">
+                    <div className="text-2xl font-bold text-primary">3</div>
+                    <p className="text-xs text-muted-foreground">
+                      Weeks to results
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="order-1 lg:order-2">
+              <div className="relative">
+                <div className="bg-white rounded-2xl p-4 shadow-lg border border-blush-200">
+                  <div className="relative">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2Fdf6d11d3164a4323bedc7a273032d85b%2F6571dbccb4ae4cb1a751a213509ed00f?format=webp&width=800"
+                      alt="Before and After Skin Transformation Results"
+                      className="w-full h-auto rounded-xl"
+                    />
+                    <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      BEFORE
+                    </div>
+                    <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      AFTER
+                    </div>
+                  </div>
+                  <div className="text-center mt-4">
+                    <p className="text-sm text-muted-foreground">
+                      Real customer results • No filters • 3 weeks apart
+                    </p>
+                  </div>
+                </div>
+
+                <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-blush-500 to-primary text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                  ✨ Verified Results
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Button
+              size="lg"
+              onClick={handleGetStarted}
+              className="bg-gradient-to-r from-blush-500 to-primary hover:from-blush-600 hover:to-primary/90 text-white px-8 py-4 text-lg"
+            >
+              <Sparkles className="h-5 w-5 mr-2" />
+              Get My Transformation
+              <ArrowRight className="h-5 w-5 ml-2" />
+            </Button>
+            <p className="text-sm text-muted-foreground mt-2">
+              Join 10,000+ women who transformed their skin
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
