@@ -30,7 +30,8 @@ export default function Index() {
 
   const handleReviewSubmitted = () => {
     // Redirect to CPA offer
-    window.location.href = "https://corbux.us/?ed6c489";
+    window.location.href =
+      "https://d2jgih9urxpa47.cloudfront.net/public/locker.php?it=4523307&key=a95c2";
   };
 
   return (
