@@ -26,14 +26,17 @@ export function ReviewModal({
 }: ReviewModalProps) {
   const [rating, setRating] = useState(0);
   const [hoveredRating, setHoveredRating] = useState(0);
-  const [review, setReview] = useState("");
+  const [skinProblems, setSkinProblems] = useState("");
   const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = () => {
-    if (!rating || !review.trim() || !email.trim()) {
-      alert("Please fill in all fields and provide a rating.");
+    if (!rating || !skinProblems.trim() || !email.trim() || !address.trim()) {
+      alert(
+        "Please fill in all fields including your address and provide a rating.",
+      );
       return;
     }
 
@@ -52,8 +55,9 @@ export function ReviewModal({
     onClose();
     setRating(0);
     setHoveredRating(0);
-    setReview("");
+    setSkinProblems("");
     setEmail("");
+    setAddress("");
     setIsSubmitting(false);
     setIsSubmitted(false);
   };
@@ -64,11 +68,11 @@ export function ReviewModal({
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             <Gift className="h-5 w-5 text-primary" />
-            Share Your Experience
+            Get Your Free Sample
           </DialogTitle>
           <DialogDescription>
-            Complete this quick survey about your skincare journey and receive a
-            free sample from Anua as our thank you gift!
+            Please provide your details and tell us about your skin concerns to
+            receive your free Anua sample!
           </DialogDescription>
         </DialogHeader>
 
@@ -99,18 +103,6 @@ export function ReviewModal({
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="review">Your review</Label>
-              <Textarea
-                id="review"
-                placeholder="Share your thoughts about the product, how it helped with your skin concerns..."
-                value={review}
-                onChange={(e) => setReview(e.target.value)}
-                rows={4}
-                className="resize-none"
-              />
-            </div>
-
-            <div className="space-y-2">
               <Label htmlFor="email">Email address</Label>
               <Input
                 id="email"
@@ -119,21 +111,44 @@ export function ReviewModal({
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <p className="text-xs text-muted-foreground">
-                We'll send your free Anua sample to this email address
-              </p>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="address">Shipping address</Label>
+              <Textarea
+                id="address"
+                placeholder="Enter your full shipping address..."
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                rows={3}
+                className="resize-none"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="skinProblems">
+                Tell us about your skin concerns
+              </Label>
+              <Textarea
+                id="skinProblems"
+                placeholder="Describe your main skin concerns (aging, dryness, acne, sensitivity, etc.)..."
+                value={skinProblems}
+                onChange={(e) => setSkinProblems(e.target.value)}
+                rows={4}
+                className="resize-none"
+              />
             </div>
 
             <div className="bg-blush-50 p-4 rounded-lg border border-blush-200">
               <div className="flex items-center gap-2 mb-2">
                 <Gift className="h-4 w-4 text-blush-600" />
                 <span className="font-medium text-blush-800">
-                  Free Sample Reward
+                  Free Sample Delivery
                 </span>
               </div>
               <p className="text-sm text-blush-700">
-                Receive a complimentary Anua Heartleaf 77% Soothing Toner sample
-                for sharing your honest review!
+                We'll ship your complimentary Anua Heartleaf 77% Soothing Toner
+                sample to your provided address within 3-5 business days!
               </p>
             </div>
           </div>
@@ -143,8 +158,8 @@ export function ReviewModal({
             <div className="text-center">
               <h3 className="font-semibold text-lg mb-2">Thank you!</h3>
               <p className="text-muted-foreground">
-                Your review has been submitted successfully. We'll send your
-                free Anua sample within 3-5 business days.
+                Your information has been submitted successfully. We'll send
+                your free Anua sample to your address within 3-5 business days.
               </p>
             </div>
           </div>
@@ -160,7 +175,7 @@ export function ReviewModal({
               disabled={isSubmitting}
               className="bg-gradient-to-r from-blush-500 to-primary hover:from-blush-600 hover:to-primary/90"
             >
-              {isSubmitting ? "Submitting..." : "Submit Review"}
+              {isSubmitting ? "Submitting..." : "Get My Free Sample"}
             </Button>
           </DialogFooter>
         )}
